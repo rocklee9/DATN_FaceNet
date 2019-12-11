@@ -36,7 +36,7 @@ conn=pyodbc.connect(
 )
 
 # Khai bao cong cua server
-my_port = '8000'
+my_port = '8976'
 scale = 0.00392
 conf_threshold = 0.5
 nms_threshold = 0.4
@@ -63,7 +63,6 @@ with tf.Graph().as_default():
     sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options, log_device_placement=False))
     with sess.as_default():
         # Load model MTCNN phat hien khuon mat
-        print('Loading feature extraction model')
         facenet.load_model(FACENET_MODEL_PATH)
         
         # Lay tensor input va output
@@ -78,21 +77,16 @@ with tf.Graph().as_default():
         people_detected = set()
         person_detected = collections.Counter()
 
-# Cac ham ho tro chay YOLO
 
-@app.route("/")
-def hello():
-    return "Hello PyMi.vn!"
-
-def get_output_layers(net):
-    layer_names = net.getLayerNames()
-    output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
-    return output_layers
 
 
 def build_return(class_id, x, y, x_plus_w, y_plus_h):
     return str(class_id) + "," + str(x) + "," + str(y) + "," + str(x_plus_w) + "," + str(y_plus_h)
 
+
+@app.route('/')
+def index():
+    return '<h1>hello !<h1>'
 
 # Khai bao ham xu ly request trainning
 @app.route('/trainning', methods=['POST'])
@@ -123,7 +117,6 @@ def trainning():
     #image=cv2.imdecode(image, cv2.IMREAD_ANYCOLOR)
     image=np.asarray(image)
     if image.ndim<2:
-        print('Unable to align ')
         return retString
         
     if image.ndim == 2:
@@ -202,11 +195,8 @@ def train():
             #labels chứa các số thứ tự để biết thằng ảnh là của ai
             #paths, labels = facenet.get_image_paths_and_labels(dataset)
             
-            print('Number of classes: %d' % len(list_lables))
-            print('Number of images: %d' % len(list_img))
             
             # Load the model
-            print('Loading feature extraction model')
             facenet.load_model('../Models/20180402-114759.pb')
             
             
@@ -237,7 +227,6 @@ def train():
 
             
             # Train classifier
-            print('Training classifier')
             model = SVC(kernel='linear', probability=True)
             model.fit(emb_array, list_lable_number)
         
@@ -247,7 +236,6 @@ def train():
             # Saving classifier model
             with open(classifier_filename_exp, 'wb') as outfile:
                 pickle.dump((model, list_lables), outfile)
-            print('Saved classifier model to file "%s"' % classifier_filename_exp)
             result="train thành công"
     return result         
   
@@ -263,7 +251,6 @@ def run_video():
     # Load model da train de nhan dien khuon mat - thuc chat la classifier
     with open(CLASSIFIER_PATH, 'rb') as file:
         model, class_names = pickle.load(file)
-    print("Custom Classifier, Successfully loaded")
 
     
     with tf.Graph().as_default():
@@ -313,7 +300,7 @@ def run_video():
                         
 
                         # Neu ty le nhan dang > 0.5 thi hien thi ten
-                        if best_class_probabilities > 0.6:
+                        if best_class_probabilities > 0.65:
                             name = class_names[best_class_indices[0]]
                         else:
                             # Con neu <=0.5 thi hien thi Unknow
@@ -335,5 +322,5 @@ def parse_arguments():
 
 # Thuc thi server
 if __name__ == '__main__':
-    app.run(debug=True, host='localhost',port=my_port)
+    app.run(debug=True)
     
