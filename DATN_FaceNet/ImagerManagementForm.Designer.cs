@@ -104,13 +104,13 @@
             // UserName
             // 
             this.UserName.HeaderText = "UserName";
-            this.UserName.MinimumWidth = 170;
+            //this.UserName.MinimumWidth = 170;
             this.UserName.Name = "UserName";
             // 
             // Name
             // 
             this.Name.HeaderText = "Name";
-            this.Name.MinimumWidth = 170;
+            //this.Name.MinimumWidth = 170;
             this.Name.Name = "Name";
             // 
             // groupBox2

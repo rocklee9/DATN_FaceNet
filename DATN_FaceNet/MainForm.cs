@@ -21,12 +21,16 @@ namespace DATN_FaceNet
             InitializeComponent();
             var frmLogin = new LoginForm();
             frmLogin.ShowDialog();
-            if (Common.User.Role != 1)
-            {
-                trainningToolStripMenuItem.Visible = false;
-                nhậnDiệnToolStripMenuItem3.Visible = false;
-                quảnLýTàiKhoảnToolStripMenuItem1.Visible = false;
-            }
+           
+                
+                if (Common.User.Role != 1)
+                {
+                    trainningToolStripMenuItem.Visible = false;
+                    nhậnDiệnToolStripMenuItem3.Visible = false;
+                    quảnLýTàiKhoảnToolStripMenuItem1.Visible = false;
+                }
+            
+            
         }
 
         private void OpenForm(Form form)

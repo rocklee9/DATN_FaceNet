@@ -16,6 +16,7 @@ namespace DATN_FaceNet
         
         public LoginForm()
         {
+            
             InitializeComponent();
         }
 
@@ -38,6 +39,12 @@ namespace DATN_FaceNet
         private void lbforget_Click(object sender, EventArgs e)
         {
             new SendMailForm().Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
         }
     }
 }
