@@ -1,0 +1,14 @@
+F:\DaiHoc\Nam_5_HocKy_1\DoAn\NguyenMinhHoang\SourceCode\DATN_FaceNet\FaceRecognition.Common\bin\FaceRecognition.Common.dll.config
+F:\DaiHoc\Nam_5_HocKy_1\DoAn\NguyenMinhHoang\SourceCode\DATN_FaceNet\FaceRecognition.Common\bin\FaceRecognition.Common.dll
+F:\DaiHoc\Nam_5_HocKy_1\DoAn\NguyenMinhHoang\SourceCode\DATN_FaceNet\FaceRecognition.Common\bin\FaceRecognition.Common.pdb
+F:\DaiHoc\Nam_5_HocKy_1\DoAn\NguyenMinhHoang\SourceCode\DATN_FaceNet\FaceRecognition.Common\obj\Debug\FaceRecognition.Common.dll
+F:\DaiHoc\Nam_5_HocKy_1\DoAn\NguyenMinhHoang\SourceCode\DATN_FaceNet\FaceRecognition.Common\obj\Debug\FaceRecognition.Common.pdb
+F:\DaiHoc\Nam_5_HocKy_1\DoAn\NguyenMinhHoang\SourceCode\DATN_FaceNet\FaceRecognition.Common\bin\FaceRecognition.DataBase.dll
+F:\DaiHoc\Nam_5_HocKy_1\DoAn\NguyenMinhHoang\SourceCode\DATN_FaceNet\FaceRecognition.Common\bin\EntityFramework.dll
+F:\DaiHoc\Nam_5_HocKy_1\DoAn\NguyenMinhHoang\SourceCode\DATN_FaceNet\FaceRecognition.Common\bin\Z.EntityFramework.Plus.EF6.dll
+F:\DaiHoc\Nam_5_HocKy_1\DoAn\NguyenMinhHoang\SourceCode\DATN_FaceNet\FaceRecognition.Common\bin\FaceRecognition.DataBase.pdb
+F:\DaiHoc\Nam_5_HocKy_1\DoAn\NguyenMinhHoang\SourceCode\DATN_FaceNet\FaceRecognition.Common\bin\FaceRecognition.DataBase.dll.config
+F:\DaiHoc\Nam_5_HocKy_1\DoAn\NguyenMinhHoang\SourceCode\DATN_FaceNet\FaceRecognition.Common\bin\EntityFramework.xml
+F:\DaiHoc\Nam_5_HocKy_1\DoAn\NguyenMinhHoang\SourceCode\DATN_FaceNet\FaceRecognition.Common\bin\Z.EntityFramework.Plus.EF6.xml
+F:\DaiHoc\Nam_5_HocKy_1\DoAn\NguyenMinhHoang\SourceCode\DATN_FaceNet\FaceRecognition.Common\obj\Debug\FaceRecognition.Common.csprojAssemblyReference.cache
+F:\DaiHoc\Nam_5_HocKy_1\DoAn\NguyenMinhHoang\SourceCode\DATN_FaceNet\FaceRecognition.Common\obj\Debug\FaceRecognition.Common.csproj.CopyComplete
